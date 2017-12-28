@@ -23,7 +23,9 @@ Things you may want to cover:
 
 * ...
 
-## usersテーブル
+# DB設計
+
+## users table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -36,7 +38,7 @@ Things you may want to cover:
 - has_many :messages
 
 
-## groupsテーブル
+## groups table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -48,7 +50,7 @@ Things you may want to cover:
 - has_many :messages
 
 
-## messagesテーブル
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -62,7 +64,7 @@ Things you may want to cover:
 - belongs_to :groups
 
 
-## membersテーブル
+## members table
 
 |Column|Type|Options|
 |------|----|-------|
