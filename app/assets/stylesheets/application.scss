@@ -15,6 +15,13 @@
 .wrapper {
   width: 100vw;
   height: 100vw;
+  .flash {
+    width: 100vw;
+    height: 30px;
+    background-color: #38AEF0;
+    color: #FFFFFF;
+    text-align: center;
+  }
   .sidebar {
     width: 300px;
     height: 100vh;
@@ -145,7 +152,7 @@
           width: 50px;
           margin: 32px 130px 20px 0;
           position: absolute;
-          top: calc(100vh - 87px);
+          top: calc(100vh - 57px);
           right: 30px;
           .fa-file-image-o {
             color: black;
