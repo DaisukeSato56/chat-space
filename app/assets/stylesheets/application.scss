@@ -1,10 +1,15 @@
 @import "./reset";
 @import "./variable";
+@import "font-awesome";
 
 .clearfix:after {
   content: "";
   clear: both;
   display: block;
+}
+
+.fa {
+  color: white;
 }
 
 .wrapper {
@@ -18,12 +23,22 @@
       height: 15%;
       width: 100%;
       background-color: #253141;
-      position: relative;
-      &__name {
+      .header__name {
         font-size: 16px;
         color: #FFFFFF;
         font-weight: bold;
         padding: 35px 0 0 20px;
+        float: left;
+      }
+      .fa-pencil-square-o {
+        font-size: 1.2em;
+        padding: 35px 0 0 180px;
+        float: left;
+      }
+      .fa-cog {
+        font-size: 1.2em;
+        float: left;
+        padding: 35px 0 0 10px;
       }
     }
     .groups {
@@ -64,13 +79,12 @@
             float: right;
             padding: 0 0 0 10px;
           }
-
         }
       }
       .right-header {
         height: 40px;
-        border-style: solid 1px #38AEF0;
-        margin: 28px 40px 0 0;
+        border: solid 1px #38AEF0;
+        margin: 28px 40px 0;
         padding:  0 20px;
         line-height: 40px;
         float: right;
@@ -120,19 +134,35 @@
         padding: 20px 0 20px 40px;
         .form__message {
           height: 50px;
-          width: calc(100vw - 520px);
+          width: calc(100vw - 550px);
           padding-left: 10px;
+          padding-right: 10px;
           font-size: 16px;
           color: #434A54;
+        }
+        .form__image {
+          height: 50px;
+          width: 50px;
+          display: none;
+          position: absolute;
+          top: 35px;
+          right: 200px;
+          .fa-file-image-o {
+            position: absolute;
+            top: 35px;
+            right: 200px;
+            color: black;
+          }
         }
         .form__submit {
           width: 100px;
           height: 50px;
-          text-align: center;
           background-color: #38AEF0;
           color: #FFFFFF;
           border-color: #38AEF0;
-          padding: 15px;
+          text-align: center;
+          float: right;
+          margin-right: 40px;
         }
       }
     }

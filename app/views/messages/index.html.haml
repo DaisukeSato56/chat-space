@@ -1,18 +1,20 @@
 .wrapper
   .sidebar
     .header
-      .header__name
-        %h3
-          seo
-      %ul.header__lists
-        %li
-        %li
+      .header__name.clearfix
+        %h3 seo
+      %a.header__list_new_group{ href: "#" }
+        %i.clearfix{ class: "fa fa-pencil-square-o"}
+      %a.header__list_user_setting{ href: "#" }
+        %i{ class: "fa fa-cog"}
+
+
     .groups
       =render partial: "group"
       =render partial: "group"
 
   .chat
-    .header.clearfix
+    .header
       .left-header
         %h3.left-header__name
           sample
@@ -30,8 +32,9 @@
       =render partial: "message"
       =render partial: "message"
 
-    .form
+    .form.clearfix
       %form.new-message
-        %input.form__message{placeholder: "Type a message"}
-        %label
+        %input.form__message{type: "text_field", placeholder: "Type a message"}
+          %input.form__image{type: "file"}
+            %i{ class: "fa fa-file-image-o"}
         %input.form__submit{type: "submit", value: "Send"}
