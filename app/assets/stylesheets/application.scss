@@ -143,14 +143,11 @@
         .form__image {
           height: 50px;
           width: 50px;
-          display: none;
+          margin: 32px 130px 20px 0;
           position: absolute;
-          top: 35px;
-          right: 200px;
+          top: calc(100vh - 87px);
+          right: 30px;
           .fa-file-image-o {
-            position: absolute;
-            top: 35px;
-            right: 200px;
             color: black;
           }
         }
