@@ -1,2 +1,37 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+.wrapper
+  .sidebar
+    .header
+      .header__name
+        %h3
+          seo
+      %ul.header__lists
+        %li
+        %li
+    .groups
+      =render partial: "group"
+      =render partial: "group"
+
+  .chat
+    .header.clearfix
+      .left-header
+        %h3.left-header__name
+          sample
+        %ul.left-header__members.clearfix
+          Members:
+          %li.member
+            seo
+          %li.member
+            neko
+      .right-header
+        %a.right-header__button{ href: "#" }
+          Edit
+
+    .messages
+      =render partial: "message"
+      =render partial: "message"
+
+    .form
+      %form.new-message
+        %input.form__message{placeholder: "Type a message"}
+        %label
+        %input.form__submit{type: "submit", value: "Send"}
