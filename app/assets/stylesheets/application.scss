@@ -1,12 +1,9 @@
 @import "./reset";
 @import "./variable";
 @import "font-awesome";
+@import "./mixin";
 
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: block;
-}
+
 
 .fa {
   color: white;
@@ -108,8 +105,10 @@
       overflow: scroll;
       .message {
         padding: 6px 0 0 40px;
+        @include clearfix;
         .upper-message {
           padding: 40px 0 0 0;
+          @include clearfix;
           &__name {
             font-size: 16px;
             font-weight: bold;

@@ -2,7 +2,7 @@
   .flash チャットグループが作成されました。
   .sidebar
     .header
-      .header__name.clearfix
+      .header__name
         %h3 seo
       %a.header__list_new_group{ href: "#" }
         %i.clearfix{ class: "fa fa-pencil-square-o"}
@@ -19,7 +19,7 @@
       .left-header
         %h3.left-header__name
           sample
-        %ul.left-header__members.clearfix
+        %ul.left-header__members
           Members:
           %li.member
             seo
@@ -33,7 +33,7 @@
       =render partial: "message"
       =render partial: "message"
 
-    .form.clearfix
+    .form
       %form.new-message
         %input.form__message{type: "text_field", placeholder: "Type a message"}
         %label.form__image
