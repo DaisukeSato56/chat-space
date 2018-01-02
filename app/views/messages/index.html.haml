@@ -1,0 +1,41 @@
+.wrapper
+  .flash チャットグループが作成されました。
+  .sidebar
+    .header
+      .header__name
+        %h3 seo
+      = link_to do
+        =fa_icon "pencil-square-o"
+      = link_to do
+        =fa_icon "cog"
+
+    .groups
+      =render partial: "group"
+      =render partial: "group"
+
+  .chat
+    .header
+      .left-header
+        %h3.left-header__name
+          sample
+        %ul.left-header__members
+          Members:
+          %li.member
+            seo
+          %li.member
+            neko
+      .right-header
+        = link_to "Edit", class: "right-header__button" do
+          Edit
+
+    .messages
+      =render partial: "message"
+      =render partial: "message"
+
+    .form
+      %form.new-message
+        %input.new-message__text{type: "text_field", placeholder: "Type a message"}
+        %label.new-message__image
+          %input{type: "file", style: "display:none"}
+          =fa_icon "file-image-o"
+        %input.new-message__submit{type: "submit", value: "Send"}
