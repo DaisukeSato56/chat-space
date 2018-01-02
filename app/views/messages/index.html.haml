@@ -35,8 +35,8 @@
 
     .form
       %form.new-message
-        %input.form__message{type: "text_field", placeholder: "Type a message"}
-        %label.form__image
+        %input.new-message__text{type: "text_field", placeholder: "Type a message"}
+        %label.new-message__image
           %input{type: "file", style: "display:none"}
           %i{ class: "fa fa-file-image-o"}
-        %input.form__submit{type: "submit", value: "Send"}
+        %input.new-message__submit{type: "submit", value: "Send"}
