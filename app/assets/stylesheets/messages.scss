@@ -1,3 +1,166 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.fa {
+  color: $white;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vw;
+  .flash {
+    width: 100vw;
+    height: 30px;
+    background-color: $blue;
+    color: $white;
+    text-align: center;
+  }
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    float: left;
+    .header {
+      height: 15%;
+      width: 100%;
+      background-color: $navy-blue;
+      .header__name {
+        font-size: 16px;
+        color: $white;
+        font-weight: bold;
+        padding: 35px 0 0 20px;
+        float: left;
+      }
+      .fa-pencil-square-o {
+        font-size: 1.2em;
+        padding: 35px 0 0 180px;
+        float: left;
+      }
+      .fa-cog {
+        font-size: 1.2em;
+        float: left;
+        padding: 35px 0 0 10px;
+      }
+    }
+    .groups {
+      background-color: $dark-blue;
+      height: 85%;
+      color: $white;
+      padding: 0 0 0 20px;
+      .group {
+        font-size: 15px;
+        padding: 20px 0 0 0;
+      }
+      &__message {
+        font-size: 11px;
+        padding: 5px 0 20px 0;
+      }
+    }
+  }
+
+  .chat {
+    width: calc(100vw - 300px);
+    height: 100vh;
+    float: left;
+    .header {
+      border-bottom: solid 1px #eeeeee;
+      height: 15%;
+      .left-header{
+        float: left;
+        &__name {
+          font-size: 20px;
+          color: #333333;
+          padding: 35px 0 15px 40px;
+        }
+        &__members {
+          font-size: 12px;
+          color: $thin-gray;
+          padding: 0 40px;
+          .member {
+            float: right;
+            padding: 0 0 0 10px;
+          }
+        }
+      }
+      .right-header {
+        height: 40px;
+        border: solid 1px $blue;
+        margin: 28px 40px 0;
+        padding:  0 20px;
+        line-height: 40px;
+        float: right;
+        &__button {
+          color: $blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .messages {
+      height: calc(100vh - 15% - 90px);
+      background-color: $dark-gray;
+      overflow: scroll;
+      .message {
+        padding: 6px 0 0 40px;
+        @include clearfix;
+        .upper-message {
+          padding: 40px 0 0 0;
+          @include clearfix;
+          &__name {
+            font-size: 16px;
+            font-weight: bold;
+            color: $deep-blue;
+            float: left;
+          }
+          &__date {
+            padding: 0 0 0 10px;
+            font-size: 12px;
+            color: $thin-gray;
+            float: left;
+          }
+        }
+        .lower-message {
+          padding: 10px 0 0 0;
+          float: left;
+          &__content {
+            font-size: 14px;
+            color: $deep-blue;
+          }
+        }
+      }
+    }
+
+    .form {
+      height: 90px;
+      background-color: $thin-gray;
+      .new-message {
+        padding: 20px 0 20px 40px;
+        &__text {
+          height: 50px;
+          width: calc(100vw - 520px);
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 16px;
+          color: $deep-blue;
+        }
+        &__image {
+          height: 50px;
+          width: 50px;
+          margin: 32px 130px 20px 0;
+          position: absolute;
+          top: calc(100vh - 57px);
+          right: 0;
+          .fa-file-image-o {
+            color: black;
+          }
+        }
+        &__submit {
+          width: 100px;
+          height: 50px;
+          background-color: $blue;
+          color: $white;
+          border-color: $blue;
+          text-align: center;
+          float: right;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
