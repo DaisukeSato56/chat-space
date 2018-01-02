@@ -4,9 +4,9 @@
     .header
       .header__name
         %h3 seo
-      %a.header__list_new_group{ href: "#" }
-        %i.clearfix{ class: "fa fa-pencil-square-o"}
-      %a.header__list_user_setting{ href: "#" }
+      = link_to do
+        %i{ class: "fa fa-pencil-square-o"}
+      = link_to do
         %i{ class: "fa fa-cog"}
 
 
@@ -26,8 +26,9 @@
           %li.member
             neko
       .right-header
-        %a.right-header__button{ href: "#" }
+        = link_to "Edit", class: "right-header__button" do
           Edit
+
 
     .messages
       =render partial: "message"
