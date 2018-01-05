@@ -64,7 +64,7 @@ Things you may want to cover:
 - belongs_to :groups
 
 
-## members table
+## group_users table
 
 |Column|Type|Options|
 |------|----|-------|
