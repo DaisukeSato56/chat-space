@@ -1,4 +1,6 @@
-.group{href: "#"}
-  sample
-.groups__message{ href: "#" }
-  Good Bye World
+- current_user.groups.each do |group|
+  =link_to group_messages_path(group) do
+    .group
+      = group.name
+    .groups__message
+      メッセージはまだありません。
