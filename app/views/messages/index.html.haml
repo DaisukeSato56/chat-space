@@ -1,6 +1,29 @@
 .wrapper
-  .flash チャットグループが作成されました。
   = render partial: 'shared/side_bar'
+
+  .chat
+    .header
+      .left-header
+        %h3.left-header__name
+          = @group.name
+        %ul.left-header__members
+          Members:
+          - @group.users.each do |user|
+            %li.member
+              = user.name
+      .right-header
+        = link_to edit_group_path(@group), class: "right-header__button" do
+          Edit
+    .messages
+      = render partial: "messages/message", collection: @messages
+    .form
+      = form_for [@group, @message], html: { class: "new-message" } do |f|
+        = f.text_field :content, class: "new-message__text", placeholder: "Type a message"
+        = f.label :image, class: "new-message__image" do
+          = f.file_field :image, style: "display:none"
+          = fa_icon "file-image-o"
+        = f.submit "Send", class: "new-message__submit"
+
   -# .sidebar
   -#   .header
   -#     .header__name
@@ -13,7 +36,6 @@
   -#   .groups
   -#     =render partial: "group"
 
-  = render "shared/chat"
   -# .chat
   -#   .header
   -#     .left-header
@@ -32,11 +54,11 @@
   -#   .messages
   -#     =render partial: "message"
   -#     =render partial: "message"
-  -#
-  -#   .form
-  -#     %form.new-message
-  -#       %input.new-message__text{type: "text_field", placeholder: "Type a message"}
-  -#       %label.new-message__image
-  -#         %input{type: "file", style: "display:none"}
-  -#         =fa_icon "file-image-o"
-  -#       %input.new-message__submit{type: "submit", value: "Send"}
+
+  -# .form
+  -#   %form.new-message
+  -#     %input.new-message__text{type: "text_field", placeholder: "Type a message"}
+  -#     %label.new-message__image
+  -#       %input{type: "file", style: "display:none"}
+  -#       =fa_icon "file-image-o"
+  -#     %input.new-message__submit{type: "submit", value: "Send"}
