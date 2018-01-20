@@ -1,5 +1,5 @@
 .fa {
-  color: $white;
+  color: white;
 }
 
 .wrapper {
@@ -96,7 +96,7 @@
 
     .messages {
       height: calc(100vh - 15% - 90px);
-      background-color: $dark-gray;
+      background-color: $linen;
       overflow: scroll;
       .message {
         padding: 6px 0 0 40px;
@@ -124,6 +124,10 @@
             font-size: 14px;
             color: $deep-blue;
           }
+          &__image {
+            width: 800px;
+            height: 800px;
+          }
         }
       }
     }
@@ -135,21 +139,26 @@
         padding: 20px 0 20px 40px;
         &__text {
           height: 50px;
-          width: calc(100vw - 520px);
+          width: calc(100vw - 550px);
           padding-left: 10px;
           padding-right: 10px;
           font-size: 16px;
           color: $deep-blue;
+          float: left;
+          border: none;
         }
         &__image {
+          background-color: $white;
+          float: left;
           height: 50px;
-          width: 50px;
-          margin: 32px 130px 20px 0;
-          position: absolute;
-          top: calc(100vh - 57px);
-          right: 0;
+          padding-right: 10px;
+          &__image2 {
+            font-size: 20px;
+            line-height: 50px;
+          }
           .fa-file-image-o {
             color: black;
+            padding-top: 15px;
           }
         }
         &__submit {
