@@ -1,5 +1,5 @@
 .fa {
-  color: $white;
+  color: white;
 }
 
 .wrapper {
@@ -139,20 +139,26 @@
         padding: 20px 0 20px 40px;
         &__text {
           height: 50px;
-          width: calc(100vw - 520px);
+          width: calc(100vw - 550px);
           padding-left: 10px;
           padding-right: 10px;
           font-size: 16px;
           color: $deep-blue;
+          float: left;
+          border: none;
         }
         &__image {
+          background-color: $white;
+          float: left;
           height: 50px;
-          width: 50px;
-          position: absolute;
-          top: calc(100vh - 57px);
-          right: 130px;
+          padding-right: 10px;
+          &__image2 {
+            font-size: 20px;
+            line-height: 50px;
+          }
           .fa-file-image-o {
             color: black;
+            padding-top: 15px;
           }
         }
         &__submit {

@@ -19,9 +19,10 @@
     .form
       = form_for [@group, @message], html: { class: "new-message" } do |f|
         = f.text_field :content, class: "new-message__text", placeholder: "Type a message"
-        = f.label :image, class: "new-message__image" do
-          = f.file_field :image, style: "display:none"
-          = fa_icon "file-image-o"
+        .new-message__image
+          = f.label :image, class: "new-message__image2" do
+            = f.file_field :image, style: "display:none"
+            = fa_icon "file-image-o"
         = f.submit "Send", class: "new-message__submit"
 
   -# .sidebar
