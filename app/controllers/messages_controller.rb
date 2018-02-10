@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
     if @message.save
       flash[:notice] = "メッセージが送信されました"
       respond_to do |format|
-        format.html { redirect_to group_messages_path }
+        format.html { redirect_to group_messages_path(@group) }
         format.json
       end
     else

@@ -1,22 +1,23 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   function buildHTML(message) {
-    var image = message.image.url ? `<img src="${ message.image.url }" class: "lower-message__image">` : ``;
+    var image = message.image.url ? `<img src='${ message.image.url }' class: 'lower-message__image'>` : ``;
     var content = message.content ? `${ message.content }` : ``;
-    var html = `<div class="message">
-                  <div class="upper-message clearfix">
-                    <div class="upper-message__name">
+    var html = `
+                <div class='message'>
+                  <div class='upper-message'>
+                    <div class='upper-message__name'>
                       ${ message.name }
-                    <div class="upper-message__date"
+                    </div>
+                    <div class='upper-message__date'>
                       ${ message.created_at }
                     </div>
                   </div>
-                  <div class="lower-message">
-                    <p class="lower-message__content">
-                      ${ content }
-                    </p>
+                  <div class='lower-message'>
+                    <p class='lower-message__content'>${ content }</p>
                     ${ image }
                   </div>
-                </div>`
+                </div>
+                `
     return html;
   }
   $('.new-message').on('submit', function(e) {
@@ -29,9 +30,9 @@ $(function(){
       data: formData,
       dataType: 'json',
       processData: false,
-      contentData: false
+      contentType: false
     })
-    .done(function(date){
+    .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.new-message__text').val('')
