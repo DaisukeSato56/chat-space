@@ -52,4 +52,8 @@ $(document).on('turbolinks:load', function(){
     userName = $(this).attr('data-user-name')
     appendChatMember(userId, userName)
   });
+
+  $(document).on("click", '.chat-group-user__btn--remove', function(){
+    $(this).parent().remove();
+  });
 });
