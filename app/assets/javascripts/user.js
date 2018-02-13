@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', function(){
-
   var search_list = $('#user-search-result');
   var users_list = $('#chat-group-users')
 
@@ -22,14 +21,14 @@ $(document).on('turbolinks:load', function(){
     users_list.append(html);
   }
 
-  $('#user-search-field').on('keyup', function(e){
-    e.preventDefault();
+  $('#user-search-field').on('keyup', function(){
     var input = $('#user-search-field').val();
-
+    var inputs = input.split(" ").filter(function(e) { return e; });
+    var newInput = inputs.join();
     $.ajax({
       type: 'GET',
       url: '/users',
-      data: { keyword: input },
+      data: { keyword: newInput },
       dataType: 'json'
     })
     .done(function(users){
